@@ -2,174 +2,223 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>PlayStation Premium Menu</title>
+    <title>Vibestation Pondok Aren Menu</title>
     <style>
-        body {
+        /* Reset & Base */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: radial-gradient(circle at top left, #1a2e5a 0%, #050a12 100%);
-            color: white;
+            background: linear-gradient(135deg, #1a2e5a, #050a12);
+            color: #fff;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        /* Header PlayStation Style */
+        /* Header */
         header {
             width: 90%;
-            padding: 30px 0;
+            max-width: 1200px;
+            padding: 20px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .ps-logo { font-size: 24px; font-weight: bold; letter-spacing: 2px; }
-        .system-icons { font-size: 20px; color: #aaa; }
+        .ps-logo {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #00bfff;
+        }
 
-        /* Container Utama */
+        .system-icons {
+            font-size: 22px;
+            color: #aaa;
+        }
+
+        /* Container */
         .container {
             width: 90%;
             max-width: 1200px;
-            margin-top: 40px;
+            margin-top: 30px;
         }
 
-        h1 { font-size: 3rem; margin-bottom: 10px; }
-        .subtitle { color: #00bfff; margin-bottom: 40px; font-weight: bold; }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            color: #fff;
+        }
 
-        /* Grid Layout */
+        .subtitle {
+            color: #00bfff;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        /* Grid Menu */
         .menu-wrapper {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
         }
 
-        /* Card PlayStation Style */
+        /* Card */
         .category-card {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 15px;
             padding: 20px;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(8px);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
         }
 
         .category-card h2 {
-            border-bottom: 3px solid #00439c;
-            display: inline-block;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #00bfff;
             padding-bottom: 5px;
-            margin-bottom: 20px;
         }
 
+        /* Menu Items */
         .menu-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 10px 15px;
             margin-bottom: 10px;
-            background: rgba(255, 255, 255, 0.03);
             border-radius: 8px;
+            background: rgba(255, 255, 255, 0.03);
             transition: 0.3s;
         }
 
         .menu-item:hover {
-            background: white;
+            background: #00bfff;
             color: #050a12;
-            transform: scale(1.02);
             cursor: pointer;
         }
 
-        .item-name { font-weight: 500; }
-        .item-price { color: #00bfff; font-weight: bold; }
-        .menu-item:hover .item-price { color: #00439c; }
+        .menu-item .item-name {
+            font-weight: 500;
+        }
 
-        /* Footer Icons */
+        .menu-item .item-price {
+            font-weight: bold;
+            color: #00bfff;
+        }
+
+        .menu-item:hover .item-price {
+            color: #050a12;
+        }
+
+        /* Footer */
         .footer-nav {
-            margin-top: auto;
-            padding: 30px;
+            margin-top: 40px;
+            padding: 20px;
             color: #888;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .category-card h2 { font-size: 1.3rem; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="ps-logo">Menu Vibestation Pondok Aren</div>
+        <div class="ps-logo">Vibestation Pondok Aren</div>
         <div class="system-icons">△ &nbsp; ○ &nbsp; □ &nbsp; ✕</div>
     </header>
 
     <div class="container">
-        <h1>Menu Vibestation Pondok Aren</h1>
-        <p class="subtitle">Experience the Taste of Seoul</p>
-
-  <div class="container">
-        <h1>Dashboard Menu</h1>
+        <h1>Menu Dashboard</h1>
         <p class="subtitle">Premium Noodle & Snacks Collection</p>
 
         <div class="menu-wrapper">
+
+            <!-- Mie Sedaap -->
             <div class="category-card">
                 <h2>Varian Rasa Mie Sedaap</h2>
                 <div class="menu-item"><span class="item-name">✕ SALERO PADANG</span><span class="item-price">16k</span></div>
-<div class="menu-item"><span class="item-name">✕ AYAM BAKAR LIMAU</span><span class="item-price">16k</span></div>
-<div class="menu-item"><span class="item-name">✕ KOREAN SPICY CHICKEN</span><span class="item-price">16k</span></div>
-<div class="menu-item"><span class="item-name">✕ KOREAN CHEESE BULDAK</span><span class="item-price">16k</span></div>
-<div class="menu-item"><span class="item-name">✕ SINGAPORE SPICY LAKSA</span><span class="item-price">16k</span></div>
-<div class="menu-item"><span class="item-name">✕ KOREAN SPICY SOUP</span><span class="item-price">16k</span></div>
-<div class="menu-item"><span class="item-name">✕ RAWIT BINGIT</span><span class="item-price">16k</span></div>
-<div class="menu-item"><span class="item-name">✕ BASO SPESIAL</span><span class="item-price">16k</span></div>
+                <div class="menu-item"><span class="item-name">✕ AYAM BAKAR LIMAU</span><span class="item-price">16k</span></div>
+                <div class="menu-item"><span class="item-name">✕ KOREAN SPICY CHICKEN</span><span class="item-price">16k</span></div>
+                <div class="menu-item"><span class="item-name">✕ KOREAN CHEESE BULDAK</span><span class="item-price">16k</span></div>
+                <div class="menu-item"><span class="item-name">✕ SINGAPORE SPICY LAKSA</span><span class="item-price">16k</span></div>
+                <div class="menu-item"><span class="item-name">✕ KOREAN SPICY SOUP</span><span class="item-price">16k</span></div>
+                <div class="menu-item"><span class="item-name">✕ RAWIT BINGIT</span><span class="item-price">16k</span></div>
+                <div class="menu-item"><span class="item-name">✕ BASO SPESIAL</span><span class="item-price">16k</span></div>
                 <div class="menu-item"><span class="item-name">✕ WITH CURRY</span><span class="item-price">16k</span></div>
-<div class="menu-item"><span class="item-name">✕ SOTO</span><span class="item-price">16k</span></div>
-
-
+                <div class="menu-item"><span class="item-name">✕ SOTO</span><span class="item-price">16k</span></div>
             </div>
 
+            <!-- Indomie -->
             <div class="category-card">
                 <h2>Varian Rasa Indomie</h2>
-              <div class="menu-item"><span class="item-name">✕ Rendang</span><span class="item-price">16k</span></div>
-<div class="menu-item"><span class="item-name">✕ Mi Goreng</span><span class="item-price">16k</span></div>
-<div class="menu-item"><span class="item-name">✕ Ayam Bawang</span><span class="item-price">16k</span></div>
-<div class="menu-item"><span class="item-name">✕ Soto</span><span class="item-price">16k</span></div>
-<div class="menu-item"><span class="item-name">✕ Kari Ayam</span><span class="item-price">16k</span></div>
-<div class="menu-item"><span class="item-name">✕ Aceh</span><span class="item-price">16k</span></div>
-<div class="menu-item"><span class="item-name">✕ Nyemek Bangladesh</span><span class="item-price">16k</span></div>
-<div class="menu-item"><span class="item-name">✕ Rawon Mercon</span><span class="item-price">16k</span></div>
-<div class="menu-item"><span class="item-name">✕ Soto Koya Nagih</span><span class="item-price">16k</span></div>
-<div class="menu-item"><span class="item-name">✕ Soto Koya Pedas Dower</span><span class="item-price">16k</span></div>
-<div class="menu-item"><span class="item-name">✕ Soto Banjar Limau Kulit</span><span class="item-price">16k</span></div>
-<div class="menu-item"><span class="item-name">✕ Rica-Rica</span><span class="item-price">16k</span></div>
-  
+                <div class="menu-item"><span class="item-name">✕ Rendang</span><span class="item-price">16k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Mi Goreng</span><span class="item-price">16k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Ayam Bawang</span><span class="item-price">16k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Soto</span><span class="item-price">16k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Kari Ayam</span><span class="item-price">16k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Aceh</span><span class="item-price">16k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Nyemek Bangladesh</span><span class="item-price">16k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Rawon Mercon</span><span class="item-price">16k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Soto Koya Nagih</span><span class="item-price">16k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Soto Koya Pedas Dower</span><span class="item-price">16k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Soto Banjar Limau Kulit</span><span class="item-price">16k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Rica-Rica</span><span class="item-price">16k</span></div>
             </div>
-            <div class="category-card">
-              
 
-<h2>BEVERAGES</h2>
+            <!-- Beverages -->
+            <div class="category-card">
+                <h2>BEVERAGES</h2>
                 <div class="menu-item"><span class="item-name">✕ Nescafe Late</span><span class="item-price">20k</span></div>
-<div class="menu-item"><span class="item-name">✕ Nescafe Ice Black</span><span class="item-price">20k</span></div>
-<div class="menu-item"><span class="item-name">✕ Nescafe Gula Aren</span><span class="item-price">20k</span></div>
-<div class="menu-item"><span class="item-name">✕ Nescafe Cappucino</span><span class="item-price">20k</span></div>
-<div class="menu-item"><span class="item-name">✕ Nescafe Caramel</span><span class="item-price">20k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Nescafe Ice Black</span><span class="item-price">20k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Nescafe Gula Aren</span><span class="item-price">20k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Nescafe Cappucino</span><span class="item-price">20k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Nescafe Caramel</span><span class="item-price">20k</span></div>
                 <div class="menu-item"><span class="item-name">✕ Kitkat</span><span class="item-price">20k</span></div>
                 <div class="menu-item"><span class="item-name">✕ Milo</span><span class="item-price">20k</span></div>
-<div class="menu-item"><span class="item-name">✕ Hydro Coco</span><span class="item-price">20k</span></div>
-<div class="menu-item"><span class="item-name">✕ Pocari Sweat</span><span class="item-price">15k</span></div>
-<div class="menu-item"><span class="item-name">✕ Fruit tea blackcurrent</span><span class="item-price">8k</span></div>
-<div class="menu-item"><span class="item-name">✕ Fruit tea appel</span><span class="item-price">8k</span></div>
-<div class="menu-item"><span class="item-name">✕ Fruit tea strawbery</span><span class="item-price">8k</span></div>
-<div class="menu-item"><span class="item-name">✕ Fruit tea frezee</span><span class="item-price">8k</span></div>
-<div class="menu-item"><span class="item-name">✕ Coca Cola zero</span><span class="item-price">8k</span></div>
-<div class="menu-item"><span class="item-name">✕ Coca Cola ori</span><span class="item-price">8k</span></div>
-<div class="menu-item"><span class="item-name">✕ Sprite zero</span><span class="item-price">8k</span></div>
-<div class="menu-item"><span class="item-name">✕ Teh Pucuk Ori</span><span class="item-price">8k</span></div>
-<div class="menu-item"><span class="item-name">✕ Teh Pucuk Less</span><span class="item-price">8k</span></div>
-<div class="menu-item"><span class="item-name">✕ Nipis Madu</span><span class="item-price">8k</span></div>
-<div class="menu-item"><span class="item-name">✕ Aquviva</span><span class="item-price">8k</span></div>
-                
+                <div class="menu-item"><span class="item-name">✕ Hydro Coco</span><span class="item-price">20k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Pocari Sweat</span><span class="item-price">15k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Ultramilk Low Fat Chocolate</span><span class="item-price">15k</span></div>
+<div class="menu-item"><span class="item-name">✕ Ultramilk Strawberry</span><span class="item-price">15k</span></div>
+<div class="menu-item"><span class="item-name">✕ Ultramilk Taro</span><span class="item-price">15k</span></div>
+<div class="menu-item"><span class="item-name">✕ Ultramilk Coklat</span><span class="item-price">15k</span></div>
+<div class="menu-item"><span class="item-name">✕ Ultramilk Plain</span><span class="item-price">15k</span></div>
+<div class="menu-item"><span class="item-name">✕ Ultramilk Karamel</span><span class="item-price">15k</span></div>
+<div class="menu-item"><span class="item-name">✕ Ultramilk Moka</span><span class="item-price">15k</span></div>
+
+                <div class="menu-item"><span class="item-name">✕ Fruit tea blackcurrent</span><span class="item-price">8k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Fruit tea appel</span><span class="item-price">8k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Fruit tea strawbery</span><span class="item-price">8k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Fruit tea frezee</span><span class="item-price">8k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Coca Cola zero</span><span class="item-price">8k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Coca Cola ori</span><span class="item-price">8k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Sprite zero</span><span class="item-price">8k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Teh Pucuk Ori</span><span class="item-price">8k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Teh Pucuk Less</span><span class="item-price">8k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Nipis Madu</span><span class="item-price">8k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Aquviva</span><span class="item-price">8k</span></div>
             </div>
 
+            <!-- Snacks & Topping -->
             <div class="category-card">
-                 <h2>SNACKS</h2>
+                <h2>SNACKS</h2>
                 <div class="menu-item"><span class="item-name">✕ Pang-pang Pedas</span><span class="item-price">5k</span></div>
                 <div class="menu-item"><span class="item-name">✕ Pang-pang Ori</span><span class="item-price">5k</span></div>
                 <div class="menu-item"><span class="item-name">✕ Gameros Kue</span><span class="item-price">5k</span></div>
@@ -179,14 +228,14 @@
                 <div class="menu-item"><span class="item-name">✕ Koko Crunch</span><span class="item-price">5k</span></div>
                 <div class="menu-item"><span class="item-name">✕ Waffer Vanila</span><span class="item-price">5k</span></div>
                 <div class="menu-item"><span class="item-name">✕ Waffer Coklat</span><span class="item-price">5k</span></div>
-                <div></div>
+
                 <h2>TOPING</h2>
                 <div class="menu-item"><span class="item-name">✕ Siomay & Dumpling</span><span class="item-price">7k</span></div>
-<div class="menu-item"><span class="item-name">✕ Baso & Crabstik</span><span class="item-price">7k</span></div>
-<div class="menu-item"><span class="item-name">✕ Baso & Baso Kotak</span><span class="item-price">7k</span></div>
-<div class="menu-item"><span class="item-name">✕ Telur</span><span class="item-price">10k</span></div>
-
+                <div class="menu-item"><span class="item-name">✕ Baso & Crabstik</span><span class="item-price">7k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Baso & Baso Kotak</span><span class="item-price">7k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Telur</span><span class="item-price">10k</span></div>
             </div>
+
         </div>
     </div>
 
@@ -196,5 +245,3 @@
 
 </body>
 </html>
-
-                

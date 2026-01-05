@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>PlayStation Premium Menu</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: radial-gradient(circle at top left, #1a2e5a 0%, #050a12 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Header PlayStation Style */
+        header {
+            width: 90%;
+            padding: 30px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .ps-logo { font-size: 24px; font-weight: bold; letter-spacing: 2px; }
+        .system-icons { font-size: 20px; color: #aaa; }
+
+        /* Container Utama */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin-top: 40px;
+        }
+
+        h1 { font-size: 3rem; margin-bottom: 10px; }
+        .subtitle { color: #00bfff; margin-bottom: 40px; font-weight: bold; }
+
+        /* Grid Layout */
+        .menu-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        /* Card PlayStation Style */
+        .category-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .category-card h2 {
+            border-bottom: 3px solid #00439c;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .menu-item:hover {
+            background: white;
+            color: #050a12;
+            transform: scale(1.02);
+            cursor: pointer;
+        }
+
+        .item-name { font-weight: 500; }
+        .item-price { color: #00bfff; font-weight: bold; }
+        .menu-item:hover .item-price { color: #00439c; }
+
+        /* Footer Icons */
+        .footer-nav {
+            margin-top: auto;
+            padding: 30px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="ps-logo">Menu Vibestation Pondok Aren</div>
+        <div class="system-icons">△ &nbsp; ○ &nbsp; □ &nbsp; ✕</div>
+    </header>
+
+    <div class="container">
+        <h1>Menu Vibestation Pondok Aren</h1>
+        <p class="subtitle">Experience the Taste of Seoul</p>
+
+  <div class="container">
+        <h1>Dashboard Menu</h1>
+        <p class="subtitle">Premium Noodle & Snacks Collection</p>
+
+        <div class="menu-wrapper">
+            <div class="category-card">
+                <h2>LOCAL & PREMIUM RAMYUN</h2>
+                <div class="menu-item"><span class="item-name">✕ SEDAP SEAWEED CRUNCH</span><span class="item-price">5k</span></div>
+                <div class="menu-item"><span class="item-name">✕ SEDAP SOTO</span><span class="item-price">5k</span></div>
+                <div class="menu-item"><span class="item-name">✕ SEDAP WHITE CURRY</span><span class="item-price">5k</span></div>
+                <div class="menu-item"><span class="item-name">✕ SEDAP SPICY CHEESE</span><span class="item-price">5k</span></div>
+                <div class="menu-item"><span class="item-name">✕ SEDAP BASO SPESIAL</span><span class="item-price">5k</span></div>
+                <div class="menu-item"><span class="item-name">✕ SEDAP SALERO PADANG</span><span class="item-price">5k</span></div>
+                <div class="menu-item"><span class="item-name">✕ SEDAP AYAM BAKAR LIMAU</span><span class="item-price">5k</span></div>
+                <div class="menu-item"><span class="item-name">✕ SEDAP RAWIT BINGIT</span><span class="item-price">5k</span></div>
+                <div class="menu-item"><span class="item-name">✕ INDOMIE PREMIUM K-ROSE</span><span class="item-price">5k</span></div>
+                <div class="menu-item"><span class="item-name">✕ INDOMIE PREMIUM SPICY RAMYEON</span><span class="item-price">5k</span></div>
+            </div>
+
+            <div class="category-card">
+                <h2>KOREAN SELECTION</h2>
+                <div class="menu-item"><span class="item-name">✕ SAMYANG K-ROSE</span><span class="item-price">5k</span></div>
+                <div class="menu-item"><span class="item-name">✕ SAMYANG RAMEN SPICY</span><span class="item-price">5k</span></div>
+                <div class="menu-item"><span class="item-name">✕ SAMYANG CREAM CARBONARA</span><span class="item-price">5k</span></div>
+                <div class="menu-item"><span class="item-name">✕ SAMYANG QUATTRO CHEESE</span><span class="item-price">5k</span></div>
+                <div class="menu-item"><span class="item-name">✕ SAMYANG HOT CHICKEN FLAVOR</span><span class="item-price">5k</span></div>
+                <div class="menu-item"><span class="item-name">✕ SAMYANG KIMCHI</span><span class="item-price">5k</span></div>
+                <div class="menu-item"><span class="item-name">✕ NONGSHIM SHIN RAMYUN KUAH</span><span class="item-price">5k</span></div>
+                <div class="menu-item"><span class="item-name">✕ NONGSHIM SHIN RAMYUN GORENG</span><span class="item-price">5k</span></div>
+                <div class="menu-item"><span class="item-name">✕ NONGSHIM KIMCHI</span><span class="item-price">5k</span></div>
+                <div class="menu-item"><span class="item-name">✕ RABOKKI NOODLE</span><span class="item-price">5k</span></div>
+                <div class="menu-item"><span class="item-name">✕ ARIRANG NOODLE</span><span class="item-price">5k</span></div>
+            </div>
+  <div class="menu-item"><span class="item-name">✕ Samyang ramen spicy</span><span class="item-price">30k</span></div>
+            </div>
+
+            <div class="category-card">
+              
+
+<h2>BEVERAGES</h2>
+                <div class="menu-item"><span class="item-name">✕ Nescafe Late</span><span class="item-price">20k</span></div>
+<div class="menu-item"><span class="item-name">✕ Nescafe Ice Black</span><span class="item-price">20k</span></div>
+<div class="menu-item"><span class="item-name">✕ Nescafe Gula Aren</span><span class="item-price">20k</span></div>
+<div class="menu-item"><span class="item-name">✕ Nescafe Cappucino</span><span class="item-price">20k</span></div>
+<div class="menu-item"><span class="item-name">✕ Nescafe Caramel</span><span class="item-price">20k</span></div>
+<div class="menu-item"><span class="item-name">✕ Hydro Coco</span><span class="item-price">20k</span></div>
+<div class="menu-item"><span class="item-name">✕ Pocari Sweat</span><span class="item-price">15k</span></div>
+<div class="menu-item"><span class="item-name">✕ Fruit tea blackcurrent</span><span class="item-price">8k</span></div>
+<div class="menu-item"><span class="item-name">✕ Fruit tea appel</span><span class="item-price">8k</span></div>
+<div class="menu-item"><span class="item-name">✕ Fruit tea strawbery</span><span class="item-price">8k</span></div>
+<div class="menu-item"><span class="item-name">✕ Fruit tea frezee</span><span class="item-price">8k</span></div>
+<div class="menu-item"><span class="item-name">✕ Coca Cola zero</span><span class="item-price">8k</span></div>
+<div class="menu-item"><span class="item-name">✕ Coca Cola ori</span><span class="item-price">8k</span></div>
+<div class="menu-item"><span class="item-name">✕ Sprite zero</span><span class="item-price">8k</span></div>
+<div class="menu-item"><span class="item-name">✕ Teh Pucuk Ori</span><span class="item-price">8k</span></div>
+<div class="menu-item"><span class="item-name">✕ Teh Pucuk Less</span><span class="item-price">8k</span></div>
+<div class="menu-item"><span class="item-name">✕ Nipis Madu</span><span class="item-price">8k</span></div>
+<div class="menu-item"><span class="item-name">✕ Aquviva</span><span class="item-price">8k</span></div>
+                
+            </div>
+
+            <div class="category-card">
+                 <h2>SNACKS</h2>
+                <div class="menu-item"><span class="item-name">✕ Pang-pang Pedas</span><span class="item-price">5k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Pang-pang Ori</span><span class="item-price">5k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Gameros Kue</span><span class="item-price">5k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Seblak</span><span class="item-price">5k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Basreng Pedas</span><span class="item-price">5k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Marning</span><span class="item-price">5k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Koko Crunch</span><span class="item-price">5k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Waffer Vanila</span><span class="item-price">5k</span></div>
+                <div class="menu-item"><span class="item-name">✕ Waffer Coklat</span><span class="item-price">5k</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-nav">
+        Select &nbsp; • &nbsp; Back &nbsp; • &nbsp; Options
+    </div>
+
+</body>
+</html>
+
+                
